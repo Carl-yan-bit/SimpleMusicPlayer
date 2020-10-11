@@ -1,0 +1,311 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/* 旋转动画 */
+@keyframes rotate{
+	from{}
+	to{
+		transform: rotate(360deg);
+	}
+}
+body {
+	background-image: url(resource/background1.jpg);
+	background-repeat: no-repeat;
+	background-size: 1900px 900px;
+}
+.app {
+	width: 1000px;
+	height: 700px;
+	position: relative;
+	left: 420px;
+	top: 120px;
+	background-color: rgba(0,0,0,0);
+}
+/* 头部 */
+.header {
+	height: 100px;
+	border-radius: 20px;
+	background-color: rgba(16,44,140,.5);
+	background: linear-gradient(to right,rgba(255,95,85,.5),rgba(16,44,140,.5));
+}
+#title {
+	color: white;
+	float: left;
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 100px;
+	margin-left: 50px;
+}
+.search {
+	float: right;
+	margin-top: 35px;
+	margin-right: 80px;
+	height: 50px;
+	opacity: .7;
+	font-size: 14px;
+}
+#search_button {
+	height: 35px;
+	width: 35px;
+	vertical-align: bottom;
+	background-image: url(resource/放大镜.png);
+	background-size: 35px 35px;
+	outline: none;
+	border: none;
+	background-color: rgba(0,0,0,0);
+	transition: all 0.3s ease 0;
+	
+}
+#search_button:hover {
+	cursor: pointer;
+	transform: scale(1.1,1.1);
+}
+#search_button:active{
+	background-color: rgba(255,95,85,1);
+	border-radius: 17.5px;
+}
+#search {
+	width: 300px;
+	height: 20px;
+	margin-right: 10px;
+	outline: none;
+	border-radius: 12.5px;
+	padding: 5px;
+}
+/* 主要内容 */
+.main {
+	height: 500px;
+	margin-top: 5px;
+}
+.musicList {
+	float: left;
+	width: 250px;
+	height: 500px;
+	overflow-y: auto;
+}
+
+/* 歌曲滚动条 */
+.musicList::-webkit-scrollbar {
+            width: 2px;    
+            /*height: 4px;*/
+        }
+.musicList::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(28,247,255,0.7);
+    background: rgba(28,247,255,0.7);
+    }
+.musicList::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(28,247,255,0.7);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+    }
+/* 歌曲滚动条 */
+/* 歌曲条目 */
+.musicList ul li {
+	position: relative;
+	top: 0;
+	height: 50px;
+	border-radius: 20px;
+	padding-left: 20px;
+	margin: 10px;
+	background-color: rgba(255,95,85,.5);
+	transition: all 0.3s ease 0s; 
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	/* 多行溢出代码 */
+	overflow:hidden;
+	text-overflow:ellipsis;
+	/*弹性伸缩盒子模型显示*/
+	display:-webkit-box;
+	/*限制在一个块元素显示的文本的行数*/
+	-webkit-line-clamp:2;
+	/*设置或检索伸缩盒对象的子元素的排列方式*/
+	-webkit-box-orient:vertical;
+}
+#musicIcon {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	overflow: hidden;
+	vertical-align: bottom;
+	transition: all 0.3s ease 0s; 
+}
+#musicIcon:hover {
+	cursor: pointer;
+	background-color: rgba(255,95,85,1);
+	transform: translateY(-5px) scale(1.5,1.5);
+}
+#mvIcon {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	overflow: hidden;
+	vertical-align: bottom;
+	transition: all 0.3s ease 0s; 
+	top: 10px;
+	right: 10px;
+	left: 200px;
+}
+#mvIcon:hover {
+	cursor: pointer;
+	background-color: rgba(255,95,85,1);
+	transform: translateY(-5px) scale(1.5,1.5);
+}
+.musicList ul li:hover {
+	background-color: rgba(255,95,85,1);
+	transform: translateY(-5px) scale(1.05,1.05);
+	cursor: default;
+}
+.musicList ul li:active {
+	background-color: rgb(255,255,255,.5);
+}
+.animation {
+	border-radius: 20px;
+	float: left;
+	height: 500px;
+	width: 500px;
+	background-color: rgba(50,40,100,.5);
+	position: relative;
+}
+/* 唱片 */
+.play {
+	animation-name: rotate;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+.stop {
+	animation-name: rotate;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	animation-play-state:paused;
+}
+.off {
+	transform: rotate(0)!important;
+}
+#animation_picture {
+	width: 500px;
+	height: 500px;
+	opacity: .7;	
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#picture {
+	width: 250px;
+	height: 250px;
+	border-radius: 125px;
+	opacity: .9;
+	position: absolute;
+	left: 125px;
+	top: 125px;
+}
+/* 唱针 */
+#stylus {
+	position: absolute;
+	left: 375px;
+	top: 70px;
+	transition: all .7s linear 0s;
+	transform: rotate(-25deg);
+	transform-origin: 85px 25px;
+}
+#stylus:hover {
+	cursor: pointer;
+}
+/* 评论 */
+/* 评论滚动条 */
+.comment::-webkit-scrollbar {
+            width: 2px;    
+            /*height: 4px;*/
+        }
+.comment::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(246,70,70,0.7);
+    background: rgba(246,70,70,0.7);
+    }
+.comment::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(246,70,70,0.7);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+    }
+/* 评论滚动条 */
+.comment {
+	overflow-y: auto;
+	border-radius: 20px;
+	float: right;
+	width: 250px;
+	height: 500px;
+
+}
+.comment li {
+	list-style: none;
+	text-align: left;
+}
+#comment_text {
+	font-family: "SimHei";
+	font-size: 16px;
+	font-weight: 400;
+	color: white;
+}
+#nickName {
+	color: white;
+	font-weight: bold;
+}
+#profilePicture {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+}
+.subInfo {
+	float: left;
+	width: 50px;
+}
+.subComment {
+	float: right;
+	width: 190px;
+}
+.singleComment{
+	overflow: hidden;
+	margin-bottom: 15px;
+	background-color: rgba(16,44,140,.5);
+	border-radius: 20px;
+}
+#title2 {
+	color: red;
+	font-weight: bolder;
+	font-size: 25px;
+	margin-right: 70px;
+	position: sticky;
+	top: 0;
+}
+/* 尾部 */
+.footer {
+	height: 100px;
+	position: relative;
+}
+#musicPlayer {
+	width: 1000px;
+	outline: none;
+	margin-top: 25px;
+	opacity: .7;
+}
+#mvPlayer {
+	position: fixed;
+	top: 225px;
+	left: 550px;
+}
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 1900px;
+	height: 900px;
+	background-color: rgba(0,0,0,.7);
+}
+
