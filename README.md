@@ -27,5 +27,10 @@
 1. 觅元素 http://www.51yuansu.com/
 2. 摄图网 https://699pic.com/
 
+## 6.展示
 
+![image-20201122220458478](C:\Users\yanhaoming\AppData\Roaming\Typora\typora-user-images\image-20201122220458478.png)
 
+播放音乐
+
+![image-20201122220610047](C:\Users\yanhaoming\AppData\Roaming\Typora\typora-user-images\image-20201122220610047.png)
