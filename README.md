@@ -29,9 +29,9 @@
 
 ## 6.展示
 
-![musicPlayer1](\tree\master\resource\musicPlayer1.png)
+![musicPlayer1](tree\master\resource\musicPlayer1.png)
 
 播放音乐
 
-![musicPlayer2](\tree\master\resource\musicPlayer2.png)
+![musicPlayer2](tree\master\resource\musicPlayer2.png)
 
