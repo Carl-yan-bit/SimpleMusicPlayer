@@ -29,9 +29,9 @@
 
 ## 6.展示
 
-![musicPlayer1](E:\WebLearning\MyWork\SimpleMusicPlayer\resource\musicPlayer1.png)
+![musicPlayer1](resource\musicPlayer1.png)
 
 播放音乐
 
-![musicPlayer2](E:\WebLearning\MyWork\SimpleMusicPlayer\resource\musicPlayer2.png)
+![musicPlayer2](resource\musicPlayer2.png)
 
