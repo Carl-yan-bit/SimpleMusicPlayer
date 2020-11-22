@@ -29,8 +29,9 @@
 
 ## 6.展示
 
-![image-20201122220458478](C:\Users\yanhaoming\AppData\Roaming\Typora\typora-user-images\image-20201122220458478.png)
+![musicPlayer1](E:\WebLearning\MyWork\SimpleMusicPlayer\resource\musicPlayer1.png)
 
 播放音乐
 
-![image-20201122220610047](C:\Users\yanhaoming\AppData\Roaming\Typora\typora-user-images\image-20201122220610047.png)
+![musicPlayer2](E:\WebLearning\MyWork\SimpleMusicPlayer\resource\musicPlayer2.png)
+
