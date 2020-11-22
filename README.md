@@ -26,12 +26,3 @@
 
 1. 觅元素 http://www.51yuansu.com/
 2. 摄图网 https://699pic.com/
-
-## 6.展示
-
-![musicPlayer1](tree\master\resource\musicPlayer1.png)
-
-播放音乐
-
-![musicPlayer2](tree\master\resource\musicPlayer2.png)
-
