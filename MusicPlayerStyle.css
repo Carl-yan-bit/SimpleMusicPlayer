@@ -12,19 +12,23 @@
 body {
 	background-image: url(resource/background1.jpg);
 	background-repeat: no-repeat;
-	background-size: 1900px 900px;
+	background-size: cover;
+	background-attachment: fixed;
 }
 .app {
 	width: 1000px;
 	height: 700px;
-	position: relative;
-	left: 420px;
-	top: 120px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	
+	
 	background-color: rgba(0,0,0,0);
 }
 /* 头部 */
 .header {
-	height: 100px;
+	height: 14.29%;
 	border-radius: 20px;
 	background-color: rgba(16,44,140,.5);
 	background: linear-gradient(to right,rgba(255,95,85,.5),rgba(16,44,140,.5));
@@ -72,22 +76,23 @@ body {
 	outline: none;
 	border-radius: 12.5px;
 	padding: 5px;
+	
 }
 /* 主要内容 */
 .main {
-	height: 500px;
+	height: 71.43%;
 	margin-top: 5px;
 }
 .musicList {
 	float: left;
-	width: 250px;
-	height: 500px;
+	width: 25%;
+	height: 100%;
 	overflow-y: auto;
 }
 
 /* 歌曲滚动条 */
 .musicList::-webkit-scrollbar {
-            width: 2px;    
+            width: 8px;    
             /*height: 4px;*/
         }
 .musicList::-webkit-scrollbar-thumb {
@@ -105,14 +110,14 @@ body {
 .musicList ul li {
 	position: relative;
 	top: 0;
-	height: 50px;
+	height: 60px;
 	border-radius: 20px;
 	padding-left: 20px;
 	margin: 10px;
 	background-color: rgba(255,95,85,.5);
 	transition: all 0.3s ease 0s; 
 	color: white;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: bold;
 	/* 多行溢出代码 */
 	overflow:hidden;
@@ -165,9 +170,9 @@ body {
 .animation {
 	border-radius: 20px;
 	float: left;
-	height: 500px;
-	width: 500px;
-	background-color: rgba(50,40,100,.5);
+	height: 100%;
+	width: 50%;
+	background-color: rgba(50,40,100,.3);
 	position: relative;
 }
 /* 唱片 */
@@ -192,6 +197,7 @@ body {
 #animation_picture {
 	width: 500px;
 	height: 500px;
+	border-radius: 50%;
 	opacity: .7;	
 	position: absolute;
 	left: 0;
@@ -221,7 +227,7 @@ body {
 /* 评论 */
 /* 评论滚动条 */
 .comment::-webkit-scrollbar {
-            width: 2px;    
+            width: 8px;    
             /*height: 4px;*/
         }
 .comment::-webkit-scrollbar-thumb {
@@ -234,13 +240,14 @@ body {
     border-radius: 0;
     background: rgba(0,0,0,0.1);
     }
+	
 /* 评论滚动条 */
 .comment {
 	overflow-y: auto;
 	border-radius: 20px;
 	float: right;
-	width: 250px;
-	height: 500px;
+	width: 25%;
+	height: 100%;
 
 }
 .comment li {
@@ -286,7 +293,7 @@ body {
 }
 /* 尾部 */
 .footer {
-	height: 100px;
+	height: 14.28%;
 	position: relative;
 }
 #musicPlayer {
@@ -297,15 +304,17 @@ body {
 }
 #mvPlayer {
 	position: fixed;
-	top: 225px;
-	left: 550px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 .mask {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 1900px;
-	height: 900px;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
 	background-color: rgba(0,0,0,.7);
 }
 

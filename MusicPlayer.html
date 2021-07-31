@@ -5,14 +5,16 @@
 		<title>MusicPlayer</title>
 		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		
 	</head>
 	<body>
+		
 		<!-- 音乐播放器 -->
 		<div class="app">
 			<!-- 头部 -->
 			<div class="header">
 				<!-- 标题 -->
-				<div id="title">意听</div>
+				<div id="title">YHM</div>
 				<!-- 搜索框 -->
 				<div class="search">
 					<input type="text" id="search" v-model="keywords" @keyup.enter="search"/>
@@ -35,13 +37,14 @@
 				</div>
 				<!-- 封面图片-唱片动画 -->
 				<div class="animation">
+					<canvas id="wrap" height="500px" width="500px"></canvas> 
 					<img :src="picture_src" id="picture" :class="[playAnimation?'play':'stop']">
 					<img id="animation_picture" src="resource/唱片.png" :class="[playAnimation?'play':'stop']">
 					<img src="resource/唱针.png" id="stylus" :class="[playAnimation?'off':'']" @click="touchStylus">
 				</div>
 				<!-- 评论信息栏 -->
 				<div class="comment" dir="rtl">
-					<div id="title2">热门评论</div>
+					<!-- <div id="title2">热门评论</div> -->
 					<ul>
 						<li id="comment" v-for="hotComment in hotComments">
 							<div class="singleComment">
@@ -61,7 +64,7 @@
 			</div>
 			<!-- 尾部 -->
 			<div class="footer">
-				<audio :src="music_src" controls="controls" id="musicPlayer" autoplay="autoplay" @play="play" @pause="stop">
+				<audio :src="music_src" controls="controls" id="musicPlayer" crossOrigin="anonymous" autoplay="autoplay" @play="play" @pause="stop" loop="loop">
 					
 				</audio>
 				<div class="mask" v-show="isShow" @click="stopMV"></div>
@@ -71,8 +74,10 @@
 				
 			</div>
 		</div>
+		
 		<!-- 引入样式和脚本 -->
 		<link rel="stylesheet" type="text/css" href="MusicPlayerStyle.css"/>
 		<script src="MusicPlayerScript.js" type="text/javascript" charset="utf-8"></script>
+
 	</body>
 </html>
